@@ -7,16 +7,21 @@
       <table class="table">
         <thead>
           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Created At</th>
             <th>Actions</th>
-            <th *ngFor="let column of columns"></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let row of rows">
-            <button (click)="delete(row['id'])">delete</button> ||
-            <button (click)="update(row['id'])">update</button>
-  
-            <td *ngFor="let column of columns"></td>
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.created_at}}</td>
+            <td>
+              <button (click)="delete(row['id'])">delete</button> |
+              <button (click)="update(row['id'])">update</button> 
+            </td>
           </tr>
         </tbody>
       </table>

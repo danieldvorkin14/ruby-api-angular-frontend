@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Demo</h1>
+    <h2>Angular 2+ & Bootstrap 4 & Ruby on Rails 5.1.4 </h2>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading" style="background: white;">
+      <a class="btn btn-default" routerLink="/products">Products</a>
+      <div class="divider"></div>
+      <a class="btn btn-default" routerLink="/orders">Orders</a>
+      <div class="divider"></div>
+      <a class="btn btn-default" routerLink="/customers">Customers</a>
+      <div class="divider"></div>
+      <a class="btn btn-default" routerLink="/products/add">Add Products</a>
+      <div class="divider"></div>
+      <a class="btn btn-default" routerLink="/orders/add">Add Orders</a>
+      <div class="divider"></div>
+      <a class="btn btn-default" routerLink="/customers/add">Add Customers</a>
+      <div class="divider"></div>
+    </div>
+    <div class="panel-body">
+
+        <router-outlet></router-outlet>
+
+
+    </div>
+  </div>
+</div>

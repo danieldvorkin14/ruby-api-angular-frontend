@@ -1,1 +1,33 @@
-<p>order-list works!</p>
+<div class="panel panel-default" style="margin-top:10px;">
+    <div class="panel-heading">
+        Orders
+    </div>
+    <div class="panel-body" style="position:relative">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Ref</th>
+              <th>Created At</th>
+              <th>Updated At</th> 
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rows">
+              <td>{{row.id}}</td>
+              <td>{{row.reference}}</td>
+              <td>{{row.created_at}}</td>
+              <td>{{row.updated_at}}</td>
+              <td>
+                <button (click)="update(row['id'])" class="btn btn-sm btn-info">update</button>
+                <div class="divider"></div>
+                <button (click)="delete(row['id'])" class="btn btn-sm btn-danger">delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

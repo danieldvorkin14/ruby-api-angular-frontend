@@ -1,1 +1,9 @@
-<p>order-add works!</p>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="col-xs-4 control-label" for="order">Order Reference: </label>
+        <div class="col-xs-8">
+            <input type="text" style="width: 400px;" class="form-control" required [(ngModel)]="order.reference" name="orderReference" />
+        </div>
+    </div>
+    <input type="submit" value="Create" />
+</form>

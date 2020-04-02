@@ -9,8 +9,8 @@ import { Product } from '../../models/product';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  public columns = ['id','name'];
-  public rows : Array<Product>;
+  columns = ['id','name'];
+  rows : Array<Product>;
 
   constructor(public apiService: ApiService , public router: Router) {
     
@@ -23,18 +23,18 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  public delete(id:string){
+  delete(id){
     console.log("delete : " + id);
     var path = 'products/' + id;
 
     this.apiService.delete(path).subscribe((r)=>{
-      this.rows = this.rows.filter((p,i)=>{
+      this.rows = this.rows.filter((p, i) => {
         return Number(id) !== p.id
       }, this.rows)
     });
   }
 
-  public update(id:string){
+  update(id){
     console.log("update : " + id );
     this.router.navigateByUrl('/products/add/' + id);
   }

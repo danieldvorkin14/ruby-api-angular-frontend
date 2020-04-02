@@ -19,8 +19,9 @@
             <td>{{row.name}}</td>
             <td>{{row.created_at}}</td>
             <td>
-              <button (click)="delete(row['id'])">delete</button> |
-              <button (click)="update(row['id'])">update</button> 
+              <button (click)="update(row['id'])" class="btn btn-sm btn-info">update</button>
+              <div class="divider"></div>
+              <button (click)="delete(row['id'])" class="btn btn-sm btn-danger">delete</button>
             </td>
           </tr>
         </tbody>
